@@ -197,12 +197,12 @@ Completed 200 OK in 142ms (Views: 0.5ms | GQL: 87.3ms, 44 cost | Loop API: 31.1m
 
 Declares a per-request counter stored in a thread-local. Generates:
 
-| Method | Description |
-|---|---|
-| `MyMetrics.my_metric` | Read current value (default: `0`) |
-| `MyMetrics.my_metric = n` | Set value |
-| `MyMetrics.add_my_metric(delta)` | Increment |
-| `MyMetrics.reset_my_metric` | Return current value and reset to `0` |
+| Method                           | Description                           |
+| -------------------------------- | ------------------------------------- |
+| `MyMetrics.my_metric`            | Read current value (default: `0`)     |
+| `MyMetrics.my_metric = n`        | Set value                             |
+| `MyMetrics.add_my_metric(delta)` | Increment                             |
+| `MyMetrics.reset_my_metric`      | Return current value and reset to `0` |
 
 Thread-local keys are namespaced by subclass name, so two subclasses can both declare `metric_accessor :runtime` without collision.
 
